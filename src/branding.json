@@ -1,0 +1,24 @@
+{
+  "brandName": "HOUJI",
+  "title": "Web Client Template",
+  "company": {
+    "name": "HOUJI",
+    "url": "/",
+    "socialLink": {
+      "linkedin": "/",
+      "instagram": "#",
+      "facebook": "/",
+      "youtube": "/",
+      "github": "/",
+      "dribble": "/",
+      "discord": "/",
+      "support": "/"
+    }
+  },
+  "logo": {
+    "main": "/assets/svg/logo.svg",
+    "logoIcon": "/assets/svg/logo.svg",
+    "logoFab": "",
+    "logoWatermark": ""
+  }
+}
