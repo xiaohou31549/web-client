@@ -15,12 +15,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Lint code**: `yarn lint`
 - **Fix lint errors**: `yarn lint:fix`
 - **Format code**: `yarn prettier`
+- **Run unit/component tests**: `yarn test`
+- **Watch unit/component tests**: `yarn test:watch`
+- **Run coverage**: `yarn test:coverage`
+- **Run E2E tests**: `yarn test:e2e`
+- **Run Playwright UI mode**: `yarn test:e2e:ui`
 
 
 ### Development Tools
 - **Next.js dev server**: Integrated with `yarn dev`
 - **ESLint**: For code quality checking
 - **Prettier**: For code formatting
+- **Vitest + React Testing Library**: Unit and component tests
+- **Playwright**: End-to-end tests
 
 
 ## Branch Management & Git Workflow
@@ -168,6 +175,18 @@ This is a **Next.js 16** application with **React 19** frontend components, usin
 - **Static Data**: Stored in `src/data/` directory
 - **Component Props**: Data passed through component props
 - **Context API**: For global state management (see `src/contexts/`)
+
+
+## Testing Strategy
+
+### Test Layers
+- **Unit tests**: Pure utilities and business logic (`tests/unit/`)
+- **Component tests**: Reusable UI components and blocks (`tests/components/`)
+- **E2E tests**: Critical user flows on App Router pages (`tests/e2e/`)
+
+### Notes
+- App Router async Server Components are best covered by E2E tests (unit testing is limited).
+- Use React Testing Library for DOM-level assertions; prefer user-visible behavior over implementation details.
 
 
 ## Development Guidelines
